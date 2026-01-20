@@ -58,7 +58,7 @@ function App() {
     <div className="">
       <div
         typeof="none"
-        className="flex flex-row px-4 py-1 font-semibold text-white bg-green-500"
+        className="flex flex-row px-4 py-1 font-semibold text-white bg-green-500 justify-center items-center"
       >
         {actions.map((val, index) => (
           <button

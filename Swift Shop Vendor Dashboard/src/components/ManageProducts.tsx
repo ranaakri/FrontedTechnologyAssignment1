@@ -57,7 +57,9 @@ export default function ManageProducts({ items, action, setItems }: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {action === "Add" ? (
-        <AddProduct id={id} setItems={setData} />
+        <div className="flex justify-center items-center">
+          <AddProduct id={id} setItems={setData} />
+        </div>
       ) : (
         items.map((data: Products, index) => (
           <ShowProduct
