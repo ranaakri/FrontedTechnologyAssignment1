@@ -51,63 +51,66 @@ export default function AddProduct({ id, setItems }: Props) {
     setItems(payload);
   };
   return (
-    <div className="max-w-2xl border rounded-md shadow-md">
-      <div className="p-4 rounded-md">
-        <p>
-          <input
-            type="text"
-            required
-            placeholder="Image url"
-            onChange={(e) => setImage(e.target.value)}
-          />
-        </p>
-        <h2>
-          <input
-            type="text"
-            required
-            placeholder="Product Name"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </h2>
-        <p>
-          &#8377;
-          <input
-            type="text"
-            required
-            placeholder="Price"
-            onChange={(e) => setPrice(Number(e.target.value))}
-          />
-        </p>
-        <p>
-          Catagory:{" "}
-          <select
-            name="cars"
-            id="cars"
-            onChange={(e) => setCatagory(e.target.value)}
-            required
-          >
-            <option value="Food" selected>Food</option>
-            <option value="Furniture">Furniture</option>
-            <option value="Electornics">Electornics</option>
-          </select>
-        </p>
-        <p>
-          Quentity:{" "}
-          <input
-            type="text"
-            required
-            defaultValue={0}
-            placeholder="Quentity"
-            onChange={(e) => setQty(Number(e.target.value))}
-          />
-        </p>
-        <div className="flex items-center justify-end">
-          <button
-            onClick={handleUpdate}
-            className="bg-green-500 p-2 border rounded-md shadow-sm hover:bg-green-600 cursor-pointer duration-300"
-          >
-            Add
-          </button>
+    <div className="flex items-center justify-center p-4">
+      <div className="max-w-xl border rounded-md shadow-md">
+        <div className="p-4 rounded-md">
+          <p>
+            <input
+              type="text"
+              required
+              placeholder="Image url"
+              onChange={(e) => setImage(e.target.value)}
+            />
+          </p>
+          <h2>
+            <input
+              type="text"
+              required
+              placeholder="Product Name"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </h2>
+          <p>
+            &#8377;
+            <input
+              type="text"
+              required
+              placeholder="Price"
+              onChange={(e) => setPrice(Number(e.target.value))}
+            />
+          </p>
+          <p>
+            Catagory:{" "}
+            <select
+              name="cars"
+              id="cars"
+              onChange={(e) => setCatagory(e.target.value)}
+              required
+              defaultValue={"Food"}
+            >
+              <option value="Food">Food</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Electornics">Electornics</option>
+            </select>
+          </p>
+          <p>
+            Quentity:{" "}
+            <input
+              type="text"
+              required
+              defaultValue={0}
+              placeholder="Quentity"
+              onChange={(e) => setQty(Number(e.target.value))}
+            />
+          </p>
+          <div className="flex items-center justify-end">
+            <button
+              onClick={handleUpdate}
+              className="bg-green-500 p-2 border rounded-md shadow-sm hover:bg-green-600 cursor-pointer duration-300"
+            >
+              Add
+            </button>
+          </div>
         </div>
       </div>
     </div>

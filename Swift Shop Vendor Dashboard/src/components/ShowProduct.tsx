@@ -117,9 +117,23 @@ export default function ShowProduct({ item, action, setItems }: Props) {
           </div>
           <div className="p-4 bg-green-500 text-white rounded-md">
             <h2>{item.title}</h2>
-            <p>&#8377;{item.price}</p>
+            <div className="grid grid-cols-2">
+              <p>&#8377;{item.price}</p>
+              {item.price > 500 && (
+                <p className="bg-yellow-300 text-black border rounded-full text-center">
+                  Expencive
+                </p>
+              )}
+            </div>
             <p>Catagory: {item.catagory}</p>
-            <p>Quentity: {item.qty}</p>
+            <div className="grid grid-cols-2">
+              <p>Quentity: {item.qty}</p>
+              {item.qty <= 5 && (
+                <p className="bg-yellow-300 text-black border rounded-full text-center">
+                  Limited
+                </p>
+              )}
+            </div>
           </div>
         </div>
       );
